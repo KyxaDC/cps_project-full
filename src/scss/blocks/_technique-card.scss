@@ -1,0 +1,32 @@
+.technique-card {
+    background-color: $bg-color-white;
+    width: 240px;
+    height: 160px;
+    border-radius: 6px;
+    border: 1px solid  #eaeaea;
+    font-family: "TT Lakes Medium";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    &__text {
+        line-height: 150%;
+        letter-spacing: -0.01em;
+    }
+    &__btn {
+        align-self: flex-end;
+    }
+}
+
+@media (min-width: 768px){
+    .technique-card{
+        width: 224px;
+    }
+}
+@media (min-width: 1120px){
+    .technique-card{
+        width: 240px;
+    }
+}

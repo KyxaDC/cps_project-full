@@ -1,0 +1,119 @@
+.modal-feedback {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100%;
+  padding: 24px 16px 0 16px;
+  z-index: 300;
+  background-color: $bg-color-white;
+  transition: right 0.5s ease;
+  &--open {
+    right: 0;
+    .modal-feedback__btn-top {
+      display: flex;
+    }
+  }
+  &__btn-top {
+    margin-bottom: 40px;
+    display: none;
+  }
+  &__title {
+    font-family: 'TT Lakes Bold';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 24px;
+    &::before {
+      content: url(../img/psevdo-el-2.svg);
+      position: absolute;
+      margin-left: -15px;
+      margin-top: 5px;
+    }
+  }
+  &__label {
+    display: block;
+    margin-bottom: 16px;
+    font-family: 'TT Lakes Medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: $dots-color;
+    opacity: 0.9;
+    width: 288px;
+  }
+  &__input {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    width: 288px;
+    height: 48px;
+    padding: 0 16px;
+    cursor: pointer;
+  }
+  &__textarea {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    width: 288px;
+    height: 118px;
+    padding: 12px 16px;
+    resize: none;
+    cursor: pointer;
+  }
+  &__info {
+    font-family: 'TT Lakes Medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: $text-gray;
+    span {
+      color: $accent-color;
+    }
+  }
+  &__btn-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 136px;
+    margin-top: 19px;
+    margin-left: 168px;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .modal-feedback {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .modal-feedback {
+    width: 440px;
+    padding: 40px 32px 0 32px;
+    // padding: 24px 24px 32px 24px;
+
+    border-left: 1px solid $border-bottom;
+
+    &__btn-top {
+      position: absolute;
+      left: 0;
+      margin-left: -72px;
+      margin-top: -5px;
+    }
+    &__title {
+      &::before {
+        margin-left: -32px;
+      }
+    }
+
+    &__input {
+      width: 376px;
+    }
+
+    &__textarea {
+      width: 376px;
+    }
+
+    &__btn-bottom {
+      margin-top: 23px;
+      margin-left: 272px;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.price-card {
+  width: 260px;
+  height: 200px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  &__sub-title {
+    font-family: "TT Lakes Medium";
+    font-size: 14px;
+    color: $text-gray;
+  }
+
+  &__text {
+    font-family: "TT Lakes Regular";
+    font-size: 14px;
+    color: $text-black;
+  }
+
+  &__btn {
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 21px;
+    left: 125px;
+  }
+
+  &__wrap-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 116px;
+  }
+}
+
+.date-first {
+  padding-right: 58px;
+}
+
+@media (min-width: 768px) {
+  .price-card {
+    width: 720px;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 0px;
+    &__sub-title {
+      display: none;
+    }
+    &__btn {
+      position: static;
+    }
+
+    &__wrap-left {
+      height: auto;
+      width: 331px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .price-card {
+    width: 1056px;
+    padding: 16px 24px;
+    &:not(:last-child)::before {
+      width: 1008px;
+    }
+    &__wrap-left {
+      width: 535px;
+    }
+  }
+}

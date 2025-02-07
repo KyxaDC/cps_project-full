@@ -1,0 +1,64 @@
+.footer {
+  background-color: $bg-color;
+  font-family: "TT Lakes Medium";
+  font-size: 14px;
+  color: $text-gray;
+  padding-bottom: 19px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__developers {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    line-height: 114%;
+    text-indent: 65px;
+  }
+  &__privacy-policy {
+    display: block;
+    margin-bottom: 16px;
+  }
+  &__public-offer {
+    display: block;
+    text-indent: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-bottom: 0px;
+
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+      padding-top: 32px;
+      padding-bottom: 25px;
+    }
+    &__developers {
+      white-space: wrap;
+      margin: 0;
+      text-indent: 0px;
+    }
+
+    &__public-offer {
+      white-space: wrap;
+      width: 213px;
+      text-indent: 0px;
+    }
+  }
+}
+@media (min-width: 1120px) {
+  .footer {
+    &__inner {
+      padding-bottom: 21px;
+    }
+
+    &__public-offer {
+      width: 330px;
+    }
+  }
+}

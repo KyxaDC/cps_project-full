@@ -1,0 +1,45 @@
+.top-menu {
+  overflow-x: auto;
+  background-color: $bg-color;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &__inner {
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    color: $text-gray;
+  }
+
+  &__title {
+    display: none;
+  }
+}
+.list-top {
+  display: flex;
+  &__item {
+    padding: 8px 21px;
+    border-radius: 6px;
+  }
+
+  &__item--active {
+    border: 2px solid $sub-color2;
+    background-color: $bg-color-white;
+  }
+  &__link {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1120px) {
+  .top-menu__title {
+    display: block;
+    padding-top: 14px;
+    font-family: "TT Lakes Medium";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: $text-gray; 
+  }
+}

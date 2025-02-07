@@ -1,0 +1,88 @@
+.header-desctop {
+  font-size: 16px;
+  font-family: "TT Lakes Medium";
+  font-weight: 500;
+  font-style: normal;
+  background-color: $bg-color;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  width: 304px;
+  height: 40px;
+  font-size: 28px;
+  font-family: "TT Lakes Bold";
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  line-height: 143%;
+  letter-spacing: -0.02em;
+  &::before {
+    content: url(../img/psevdo-el-2.svg);
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 320px) {
+  .repair--hidden-xs {
+    display: none;
+  }
+  .header-desctop {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .title::before {
+    content: url(../img/psevdo-el-2.svg);
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .repair--hidden-xs {
+    display: none;
+  }
+  .header-desctop {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .title::before {
+    content: url(../img/psevdo-el-2.svg);
+    position: absolute;
+    margin-left: -23px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header-desctop {
+    display: block;
+    padding-top: 42px;
+    padding-bottom: 9px;
+  }
+  .repair {
+    display: flex;
+    &__wrap-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__text {
+      display: inline-block;
+    }
+  }
+  .title::before {
+    content: url(../img/psevdo-el-2.svg);
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 7px;
+  }
+}
+

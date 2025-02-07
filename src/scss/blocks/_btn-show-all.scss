@@ -1,0 +1,18 @@
+.btn-show-all {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: "TT Lakes Medium";
+  padding: 0px 25px;
+  padding-bottom: 34px;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: url(../img/double-strelka.svg);
+    position: absolute;
+    left: 5px;
+  }
+  &--pressed::before {
+    transform: scaleY(-1);
+  }
+}

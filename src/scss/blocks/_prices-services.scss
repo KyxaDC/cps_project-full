@@ -1,0 +1,121 @@
+.prices-services {
+  background-color: $bg-color;
+  border-bottom: 1px solid $border-bottom;
+  &__cards-header {
+    display: none;
+    font-family: "TT Lakes Medium";
+    font-size: 14px;
+    color: $text-gray;
+  }
+
+  &__slides-wrapper {
+    padding-top: 16px;
+    position: relative;
+    width: auto;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: $bg-color-white;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  &__info {
+    font-family: "TT Lakes Regular";
+    font-size: 14px;
+    max-width: 421px;
+  }
+
+  &__btn {
+    font-family: "TT Lakes Medium";
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    color: $text-black;
+    margin-top: 20px;
+    padding-bottom: 45px;
+    cursor: pointer;
+    &::after {
+      content: url(../img/strelka-pink.svg);
+      position: absolute;
+      margin-left: 7px;
+      margin-top: 2px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .prices-services {
+    &__info {
+      margin-top: 24px;
+    }
+    &__slide {
+      position: relative;
+      height: auto;
+      border-radius: 0px;
+    }
+    &__slide:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      padding: 0 16px;
+      width: 688px;
+      background-color: #eaeaea;
+      height: 1px;
+      z-index: 100;
+    }
+
+    &__slides-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__cards-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding-left: 16px;
+      width: 506px;
+      height: 53px;
+    }
+    &__wrap-left {
+      display: flex;
+      justify-content: space-between;
+      width: 135px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .prices-services {
+    &__slide:not(:last-child)::before {
+      width: 1008px;
+    }
+
+    &__cards-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding-left: 16px;
+      width: 757px;
+      height: 53px;
+    }
+    &__wrap-left {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 10px;
+      width: 262px;
+      padding-right: 35px;
+    }
+  }
+}

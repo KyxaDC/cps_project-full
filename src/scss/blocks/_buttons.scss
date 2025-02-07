@@ -1,0 +1,94 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.repair {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.connection__btn-chat {
+  padding-top: 10px;
+}
+.logo {
+  width: 96px;
+  height: 50px;
+}
+
+@media (min-width: 320px) {
+  .navigation {
+    &__btn-close {
+      display: none;
+    }
+
+    &__btn-search {
+      display: none;
+    }
+  }
+
+  .repair {
+    &__text {
+      display: none;
+    }
+  }
+
+  .connection {
+    display: none;
+  }
+
+  .logo {
+    position: relative;
+    &::after {
+      content: url(../img/psevdo-el-1.svg);
+      position: absolute;
+      margin-left: 113px;
+      margin-top: -39px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .logo::after {
+    display: none;
+  }
+  .connection {
+    display: flex;
+  }
+  .navigation {
+    gap: 42px;
+  }
+
+  .logo {
+    position: relative;
+    &::before {
+      content: url(../img/psevdo-el-1.svg);
+      position: absolute;
+      margin-left: -21px;
+      margin-top: 10px;
+    }
+  }
+
+  .buttons__connection {
+    margin-left: 202px;
+    &::after {
+      content: url(../img/psevdo-el-1.svg);
+      position: absolute;
+      margin-left: 174px;
+      margin-top: 10px;
+    }
+  }
+}

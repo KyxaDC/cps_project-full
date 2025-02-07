@@ -1,0 +1,32 @@
+.repair-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $accent-color;
+  border-radius: 50%;
+  background-color: $bg-color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  img {
+    transition: 0.3s;
+  }
+  
+  @media (hover: hover) {
+    &:hover {
+      img {
+        transition: 0.3s;
+        transform: scale(1.6);
+      }
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      img {
+        transition: 0.3s;
+        transform: scale(1.6);
+      }
+    }
+  }
+}

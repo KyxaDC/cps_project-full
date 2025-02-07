@@ -1,0 +1,80 @@
+.repair-technique {
+  background-color: $bg-color;
+  padding-top: 16px;
+  border-bottom: 1px solid $border-bottom;
+  min-height: 228px;
+
+  &__slides-wrapper {
+    display: flex;
+    width: auto;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    width: 240px;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  &__btn-show-all {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .repair-technique {
+    padding-top: 24px;
+
+    &__btn-show-all {
+      display: block;
+      padding-top: 24px;
+    }
+    &__slides-wrapper {
+      display: flex;
+      column-gap: 24px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+    }
+    &__slide {
+      width: 224px;
+    }
+    &__slide {
+      &:not(:last-child) {
+        margin: 0;
+      }
+    }
+    &__slide:not(:nth-child(-n + 3)) {
+      display: none;
+    }
+  }
+}
+@media (min-width: 1119px) {
+  .repair-technique__slide:nth-child(n) {
+    display: block;
+  }
+}
+
+@media (min-width: 1120px) {
+  .repair-technique {
+    &__slide {
+      width: 240px;
+    }
+    &__slides-wrapper {
+      display: flex;
+      column-gap: 32px;
+    }
+    &__slide:not(:nth-child(-n + 4)) {
+      display: none;
+    }
+  }
+}
+.repair-technique-slide--visible:nth-child(n) {
+  display: block;
+}

@@ -1,0 +1,17 @@
+.sub-title {
+  font-family: "TT Lakes Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $text-gray;
+  background-color: $bg-color-white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 1366px) {
+  .sub-title {
+    background-color: $bg-color;
+  }
+}
